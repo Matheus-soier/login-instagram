@@ -1,0 +1,146 @@
+@import 'normalize.css';
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
+
+:root {
+    --bg-color-body: #212121;
+    --var-bgcolor: #ffffff;
+    --font-family: 'Ubuntu', sans-serif;
+    --bgcolor-btn-hover: #1877F2;
+    --bgcolor-btn: rgb(0, 149, 246);
+}
+
+body {
+    background-color: var(--bg-color-body);
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+.container {
+    font-family: var(--font-family);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: min-content;
+    background-color: var(--var-bgcolor);
+   border: 2px solid rgba(128, 128, 128, 0.186);
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    flex-direction: column;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.logo{
+    display: flex;
+}
+
+.logo img {
+    width: 200px;
+}
+
+.login {
+    width: 280px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.login fieldset {
+    border: none;
+    width: 280px;
+}
+
+.login .senha, .login .user {
+    border: 1px solid rgba(128, 128, 128, 0.558);
+    display: flex;
+    align-items: center;
+    background-color: rgba(128, 128, 128, 0.033);
+    border-radius: 3px;
+    padding: 10px 8px;
+
+}
+
+.login input {
+    background-color: rgba(128, 128, 128, 0.033);
+   border: none;
+    outline: none;
+    width: 100%;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.senha i{
+    margin-right: 8px;
+}
+
+.login .senha {
+    margin-top: 10px;
+}
+
+.btn-login {
+    width: 100%;
+    
+}
+
+.btn-login input {
+    border: none;
+    background-color: var(--bgcolor-btn);
+    color: #ffffff;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    height: 35px;
+}
+
+.btn-login input:hover {
+    background-color: var(--bgcolor-btn-hover);
+}
+
+.face {
+    display: flex;
+    align-items: center;
+    margin: 30px 0 10px 0; 
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+    color: #385185;
+}
+
+.face i {
+    font-size: 25px;
+    margin-right: 8px;
+}
+
+@media (max-width: 410px) {
+    .container {
+        width: 200px;
+    }
+
+    .logo img {
+        width: 150px;
+    }
+
+    .login fieldset {
+        border: none;
+        width: 200px;
+    }
+
+    .login {
+        width: 200px;
+    }
+
+    .face i {
+        font-size: 20px;
+        margin-right: 5px;
+    }
+
+    .face {
+        font-size: 15px;
+    }
+}
